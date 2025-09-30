@@ -1,0 +1,30 @@
+.message-bubble {
+  max-width: 70%;
+  padding: 8px 12px;
+  margin: 6px 12px;
+  border-radius: 16px;
+  position: relative;
+  word-break: break-word;
+
+  p {
+    margin: 0;
+  }
+
+  .timestamp {
+    font-size: 10px;
+    color: #666;
+    display: block;
+    text-align: right;
+    margin-top: 2px;
+  }
+
+  &.incoming {
+    background: #fff;
+    align-self: flex-start;
+  }
+
+  &.outgoing {
+    background: #dcf8c6; // WhatsApp outgoing green
+    align-self: flex-end;
+  }
+}

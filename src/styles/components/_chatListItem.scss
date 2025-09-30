@@ -1,0 +1,55 @@
+.chat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+
+  &:hover {
+    background: #f9f9f9;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .chat-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .chat-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+
+      .chat-name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .chat-time {
+        font-size: 12px;
+        color: #999;
+      }
+    }
+
+    .chat-message {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #555;
+
+      .chat-unread {
+        background: #25d366; // WhatsApp green
+        color: white;
+        border-radius: 12px;
+        padding: 2px 6px;
+        font-size: 12px;
+      }
+    }
+  }
+}

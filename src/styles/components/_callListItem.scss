@@ -1,0 +1,44 @@
+.call-list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  background: #fff;
+
+  &:hover {
+    background: #f9f9f9;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .call-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .call-type {
+      font-size: 14px;
+      color: #555;
+
+      &.missed {
+        color: red;
+      }
+    }
+  }
+
+  .call-icon {
+    font-size: 20px;
+    color: #075e54;
+  }
+}
