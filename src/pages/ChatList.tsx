@@ -1,10 +1,9 @@
 import ChatListItem from "../components/chat/ChatListItem";
 import { sampleChats } from "../utils/sampleChats";
-import "../styles/pages/_chatList.scss";
 
 const ChatList = () => {
   return (
-    <div className="chat-list">
+    <div>
       {sampleChats.map((chat) => (
         <ChatListItem key={chat.id} chat={chat} />
       ))}

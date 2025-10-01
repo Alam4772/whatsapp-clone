@@ -1,0 +1,20 @@
+.main {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  background: linear-gradient(rgb(0 128 64 / 71%), rgb(0 128 64 / 44%)),
+    url("/src/assets/images/login_background.png") center / cover no-repeat;
+
+  div {
+    display: inline-flex;
+    align-items: center;
+    flex-flow: column;
+
+    img {
+      width: 50%;
+    }
+  }
+}

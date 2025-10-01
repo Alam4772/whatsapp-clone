@@ -16,7 +16,10 @@ const ChatWindow = () => {
         id: Date.now().toString(),
         senderId: "me",
         content: input,
-        timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+        timestamp: new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
         outgoing: true,
       },
     ]);
@@ -25,7 +28,11 @@ const ChatWindow = () => {
 
   return (
     <div className="chat-window">
-    <ChatHeader name="Alice" avatar="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" status="online" />
+      <ChatHeader
+        name="Alice"
+        avatar="https://cdn-icons-png.flaticon.com/512/6596/6596121.png"
+        status="online"
+      />
       <div className="messages">
         {messages.map((msg) => (
           <MessageBubble key={msg.id} message={msg} />
@@ -40,7 +47,7 @@ const ChatWindow = () => {
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
         />
         <button onClick={sendMessage}>
-            <i className="fa-solid fa-paper-plane"></i>
+          <i className="fa-solid fa-paper-plane"></i>
         </button>
       </div>
     </div>

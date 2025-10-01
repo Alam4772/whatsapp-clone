@@ -1,10 +1,9 @@
 import CallListItem from "../components/calls/CallListItem";
 import { sampleCalls } from "../utils/sampleCalls";
-import "../styles/pages/_calls.scss";
 
 const CallList = () => {
   return (
-    <div className="calls-page">
+    <div>
       {sampleCalls.map((call) => (
         <CallListItem key={call.id} call={call} />
       ))}
