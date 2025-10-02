@@ -1,4 +1,5 @@
 import axios from "axios";
+import { localStorageService } from "./localStorageService";
 
 const api = axios.create({
   baseURL:
@@ -12,7 +13,7 @@ const api = axios.create({
 // Add interceptor for requests
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("accessToken"); // or cookies if needed
+    const token = localStorageService.get("accessToken"); // or cookies if needed
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

@@ -1,11 +1,23 @@
+import { useEffect, useState } from "react";
 import ChatListItem from "../components/chat/ChatListItem";
-import { sampleChats } from "../utils/sampleChats";
+import { getUsers } from "../services/userService";
 
 const ChatList = () => {
+  const [records, setRecords] = useState<any[]>([]);
+
+  const getUserList = async () => {
+    const users = await getUsers();    
+    setRecords(users.data.data);
+  };
+
+  useEffect(() => {
+    getUserList();
+  }, []);
+
   return (
     <div>
-      {sampleChats.map((chat) => (
-        <ChatListItem key={chat.id} chat={chat} />
+      {records.map((record) => (
+        <ChatListItem key={record.id} chat={record} />
       ))}
     </div>
   );

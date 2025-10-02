@@ -13,7 +13,7 @@ const ChatListItem: FC<Props> = ({ chat }) => {
 
   return (
     <div className="chat-list-item" onClick={() => navigate(`/chat/${chat.id}`)}>
-      <img src={chat.avatar} alt={chat.name} className="avatar" />
+      <img src={chat.picture} alt={chat.name} className="avatar" />
       <div className="chat-info">
         <div className="chat-header">
           <span className="chat-name">{chat.name}</span>
